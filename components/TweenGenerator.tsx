@@ -162,7 +162,7 @@ const TweenGenerator: React.FC<TweenGeneratorProps> = ({ onBack, language, onTog
               <label className="block text-sm font-medium text-slate-400 mb-2">{t.startFrame}</label>
               <div className="relative aspect-square bg-slate-900 rounded border-2 border-dashed border-slate-600 hover:border-slate-400 transition-colors flex items-center justify-center overflow-hidden group">
                 {startImage ? (
-                  <img src={startImage} alt="Start" className="object-cover w-full h-full" />
+                  <img src={startImage} alt="Start" className="object-contain w-full h-full" />
                 ) : (
                   <span className="text-slate-600 text-center px-4">{t.uploadStart}</span>
                 )}

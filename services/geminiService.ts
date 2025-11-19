@@ -72,7 +72,10 @@ export const planAnimationPrompts = async (
     const jsonText = response.text;
     if (!jsonText) throw new Error("No text returned from Gemini");
 
-    const parsed = JSON.parse(jsonText);
+    // Clean potential markdown code blocks (```json ... ```)
+    const cleanedJson = jsonText.replace(/```json|```/g, '').trim();
+    const parsed = JSON.parse(cleanedJson);
+    
     return parsed.prompts || [];
   } catch (error) {
     console.error("Error planning animation:", error);
