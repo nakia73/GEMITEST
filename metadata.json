@@ -1,0 +1,5 @@
+{
+  "name": "BananaTween: AI In-Betweener",
+  "description": "A dual-mode application: First, it visualizes the architectural plan for generating animation in-betweens using Gemini 2.5 Flash and Nano Banana. Second, it provides the functional prototype to generate those frames.",
+  "requestFramePermissions": []
+}
